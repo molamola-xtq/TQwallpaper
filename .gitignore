@@ -2,6 +2,7 @@
 DerivedData/
 .build/
 *.mp4
+!docs/demo/*.mp4
 *.mov
 *.m4v
 *.heic

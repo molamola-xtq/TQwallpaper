@@ -12,7 +12,9 @@ wallpaper, or freeze the current frame to a static picture.
 
 A looping, muted video wallpaper on the desktop:
 
-![TQwallpaper demo](docs/demo/wallpaper-demo.gif)
+<video src="docs/demo/demo.mp4" controls muted loop width="640"></video>
+
+*Or view the [animated GIF](docs/demo/wallpaper-demo.gif).*
 
 Sample frames from a user-provided video:
 
