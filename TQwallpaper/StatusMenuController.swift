@@ -32,15 +32,11 @@ final class StatusMenuController: NSObject, NSMenuDelegate {
 
     private func setupStatusItem() {
         statusItem.button?.toolTip = "TQwallpaper 动态壁纸"
-        if let icon = NSImage(named: "TQwallpaper-menu.png") {
-            icon.size = NSSize(width: 18, height: 18)
-            icon.isTemplate = true
-            statusItem.button?.image = icon
+        if let symbol = NSImage(systemSymbolName: "photo.on.rectangle", accessibilityDescription: "TQwallpaper") {
+            symbol.isTemplate = true
+            statusItem.button?.image = symbol
             statusItem.button?.title = ""
         } else {
-            let symbol = NSImage(systemSymbolName: "sparkles", accessibilityDescription: "TQwallpaper")
-            symbol?.isTemplate = true
-            statusItem.button?.image = symbol
             statusItem.button?.title = "TQ"
         }
         statusItem.menu = menu
