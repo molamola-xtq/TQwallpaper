@@ -10,6 +10,9 @@ struct EnergyPolicy {
     var powerSaverOn = true
 
     var shouldPlay: Bool {
-        true
+        guard dynamicEnabled else { return false }
+        if locked || sleeping { return false }
+        if powerSaverOn && (onBattery || lowPowerMode) { return false }
+        return true
     }
 }
