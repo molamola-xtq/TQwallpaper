@@ -32,7 +32,7 @@ final class StatusMenuController: NSObject, NSMenuDelegate {
 
     private func setupStatusItem() {
         statusItem.button?.toolTip = "TQwallpaper 动态壁纸"
-        if let symbol = NSImage(systemSymbolName: "photo.on.rectangle", accessibilityDescription: "TQwallpaper") {
+        if let symbol = NSImage(systemSymbolName: "photo.artframe", accessibilityDescription: "TQwallpaper") {
             symbol.isTemplate = true
             statusItem.button?.image = symbol
             statusItem.button?.title = ""
