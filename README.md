@@ -1,10 +1,19 @@
 # TQwallpaper
 
+[![CI](https://github.com/molamola-xtq/TQwallpaper/actions/workflows/ci.yml/badge.svg)](https://github.com/molamola-xtq/TQwallpaper/actions/workflows/ci.yml)
+
 macOS menu-bar video wallpaper app. Play any local video as a looping desktop
 wallpaper, or freeze the current frame to a static picture.
 
 > Bring your own content. This repository contains **no video or image
 > assets** — you choose your own wallpaper videos and pictures.
+
+## Download
+
+Latest release: [Releases](https://github.com/molamola-xtq/TQwallpaper/releases)
+
+Download the zip, move `TQwallpaper.app` to your Applications folder, then pick
+a video on first launch. No bundled content — bring your own.
 
 ## Features
 
