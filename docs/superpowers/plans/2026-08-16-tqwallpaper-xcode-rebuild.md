@@ -1917,3 +1917,13 @@ Expected: `main` 分支推送成功。仓库中不含任何视频素材。
 - Spec 覆盖：设计文档中所有决定（Swift/AppKit、多屏、SMAppService、首启引导、Open With、无素材、MIT、占位 Bundle ID、arm64）均有对应任务。
 - 类型一致性：`EnergyPolicy` 字段在 Task 3 测试与 Task 9 装配中一致；`WallpaperPlayer` 的 `load(videoPath:)`、`apply(shouldPlay:)`、`teardownPlayer()` 在 Task 6/7/9 中一致；`MediaSelection`/`MediaPicker` 在 Task 5/9 中一致；`LaunchAtLogin` 在 Task 4/9 中一致。
 - 无占位符：所有文件均给出完整内容。
+
+## 执行中发现的修复（2026-08-16）
+
+1. **`@main` 不自动设置 delegate**：AppKit 的 `NSApplicationDelegate.main()` 扩展只调用
+   `NSApplicationMain`，不会把 delegate 挂到 `NSApp`（正常模板靠 storyboard 装配）。无
+   storyboard 工程必须显式设置：在 `AppDelegate` 中提供自定义
+   `static func main()`（创建 `NSApplication.shared`、实例化 delegate、`app.run()`）。
+   否则 `applicationDidFinishLaunching` 永不执行，App 无图标、无窗口、空转。
+2. **菜单栏图标不可见**：原 `TQwallpaper-menu.png` 为深色低透明（平均 alpha 0.18），
+   在菜单栏上几乎不可见。改为模板化 SF Symbol `photo.on.rectangle`，自动适配明暗菜单栏。
