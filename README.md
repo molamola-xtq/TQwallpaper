@@ -8,6 +8,18 @@ wallpaper, or freeze the current frame to a static picture.
 > Bring your own content. This repository contains **no video or image
 > assets** — you choose your own wallpaper videos and pictures.
 
+## Demo
+
+A looping, muted video wallpaper on the desktop:
+
+![TQwallpaper demo](docs/demo/wallpaper-demo.gif)
+
+Sample frames from a user-provided video:
+
+![frame 1](docs/demo/frame-1.jpg)
+![frame 2](docs/demo/frame-2.jpg)
+![frame 3](docs/demo/frame-3.jpg)
+
 ## Download
 
 Latest release: [Releases](https://github.com/molamola-xtq/TQwallpaper/releases)
