@@ -1,0 +1,7 @@
+.DS_Store
+DerivedData/
+.build/
+*.mp4
+*.mov
+*.m4v
+*.heic
